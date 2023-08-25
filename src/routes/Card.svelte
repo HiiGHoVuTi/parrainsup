@@ -4,7 +4,7 @@
 </script>
 
 <div class="boxes_item">
-  <a href={"/"+parrain.nom} class="boxes-item_link">
+  <a href={"/"} class="boxes-item_link">
     <div class="boxes-item_bg"></div>
 
     <div class="boxes-item_title">
