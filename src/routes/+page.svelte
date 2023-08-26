@@ -1,6 +1,16 @@
 <script>
 	import Card from "./Card.svelte"
 	export let data
+
+
+  let searchTerm = "";
+
+  $: parrains = data.parrains.filter(p =>
+      JSON.stringify(p)
+					.toLowerCase()
+					.includes(searchTerm.toLowerCase())
+  	)
+
 </script>
 
 <svelte:head>
@@ -11,9 +21,29 @@
 <section>
 	<h1> Bienvenue ! Voici {data.parrains.length} des parrains </h1>
 
+
+  <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
+    <div class="mb-4">
+      <label class="block mb-2 text-sm font-bold text-gray-700" for="search">
+        Recherche
+      </label>
+      <div class="relative">
+        <input
+          class="w-full px-3 py-2 pl-10 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+          id="search"
+          type="text"
+          placeholder="prénom, mot-clef..."
+          bind:value={searchTerm}
+        />
+      </div>
+    </div>
+  </form>
+
+
+
 	<div class="format-container">
 		<div class="boxes_box">
-		{#each data.parrains as parrain}
+		{#each parrains as parrain}
 			<Card parrain={parrain}/>
 		{/each}
 		</div>
