@@ -28,9 +28,9 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
-		}
+	}
 
-		.format-container {
+	.format-container {
 	  width: 1142px;
 	  margin: 0 auto;
 	}

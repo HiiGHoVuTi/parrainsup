@@ -8,7 +8,10 @@
 
 <div class="boxes_item">
   <a href={"/p/"+parrain.nom} class="boxes-item_link">
-    <div class="boxes-item_bg"></div>
+    <div class="boxes-item_bg" 
+        style={ parrain.couleur
+          ? ("background-color: " + parrain.couleur + ";")
+          : "" }></div>
 
     <div class="boxes-item_title">
       {parrain.prénom 
@@ -28,7 +31,7 @@
       <div class="boxes-item_field-box">
         <bold> Vœu: </bold>
         <span class="boxes-item_field">
-          {parrain.vœu}
+          {crop(parrain.vœu, 180)}
         </span>
       </div>
     {/if}
@@ -38,7 +41,7 @@
       <div class="boxes-item_field-box">
         Team:
         <span class="boxes-item_field">
-          {parrain.team}
+          {crop(parrain.team, 180)}
         </span>
       </div>
     {/if}
@@ -73,9 +76,9 @@
   color: #FFF;
 }
 .boxes-item_link:hover .boxes-item_bg {
-  -webkit-transform: scale(10);
-  -ms-transform: scale(10);
-  transform: scale(10);
+  -webkit-transform: scale(12);
+  -ms-transform: scale(12);
+  transform: scale(12);
 }
 .boxes-item_title {
   min-height: 87px;
@@ -101,9 +104,9 @@
   font-weight: bold;
   color: #f9b234;
 
-  -webkit-transition: color .5s ease;
-  -o-transition: color .5s ease;
-  transition: color .5s ease
+  -webkit-transition: color .7s ease;
+  -o-transition: color .7s ease;
+  transition: color .7s ease
 }
 .boxes-item_bg {
   height: 128px;
@@ -117,9 +120,9 @@
 
   border-radius: 50%;
 
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
 }
 .boxes_item:nth-child(5n) .boxes-item_bg {
   background-color: #3ecd5e;

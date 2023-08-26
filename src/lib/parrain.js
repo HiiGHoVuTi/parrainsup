@@ -2,7 +2,7 @@
 import url from "$lib/url.js"
 import Papa from "papaparse"
 
-export const genresIllustrés = {"M": "♂", "F": "♀", "MF": "⚦" }
+export const genresIllustrés = {"M": "♂", "F": "♀", "T": "⚧", "MF": "⚦", "A": "⚥" }
 
 export async function getData(){
 	const res = await fetch(url)
@@ -26,6 +26,7 @@ export function fromArray(arr) {
     anecdote: arr[7],
     vœu: arr[8],
     bizuth: arr[9],
-    team: arr[10]
+    team: arr[10],
+    couleur: arr[11],
   }
 }
