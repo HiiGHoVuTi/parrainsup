@@ -5,7 +5,7 @@
 
 <svelte:head>
 	<title>🏠</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Parrainsup" />
 </svelte:head>
 
 <section>

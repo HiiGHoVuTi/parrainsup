@@ -1,10 +1,10 @@
 <script>
   export let parrain
-  const genresIllustrés = {"M": "♂", "F": "♀", "MF": "⚦" }
+  import { genresIllustrés } from "$lib/parrain.js"
 </script>
 
 <div class="boxes_item">
-  <a href={"/"} class="boxes-item_link">
+  <a href={"/p/"+parrain.nom} class="boxes-item_link">
     <div class="boxes-item_bg"></div>
 
     <div class="boxes-item_title">
@@ -16,20 +16,25 @@
     </div>
 
     <p class="boxes-item_field-box"> {parrain.taupin} <p/>
-  
-    <div class="boxes-item_field-box">
-      <bold> Vœu: </bold>
-      <span class="boxes-item_field">
-        {parrain.vœu}
-      </span>
-    </div>
- 
-    <div class="boxes-item_field-box">
-      Team:
-      <span class="boxes-item_field">
-        {parrain.team}
-      </span>
-    </div>
+
+    {#if parrain.vœu}  
+      <div class="boxes-item_field-box">
+        <bold> Vœu: </bold>
+        <span class="boxes-item_field">
+          {parrain.vœu}
+        </span>
+      </div>
+    {/if}
+
+     
+    {#if parrain.team}  
+      <div class="boxes-item_field-box">
+        Team:
+        <span class="boxes-item_field">
+          {parrain.team}
+        </span>
+      </div>
+    {/if}
   </a>
 </div>
 
