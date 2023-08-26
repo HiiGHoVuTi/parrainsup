@@ -11,7 +11,9 @@
       {parrain.prénom 
         + (parrain.surnom ? " «" + parrain.surnom + "»" : "") 
         + " " + parrain.nom.toUpperCase()
-        + (genresIllustrés[parrain.genre] || ", " + parrain.genre)
+        + (genresIllustrés[parrain.genre]
+          ? (" " + genresIllustrés[parrain.genre]) 
+          : ", " + parrain.genre)
       }
     </div>
 
