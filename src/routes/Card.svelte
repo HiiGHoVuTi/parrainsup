@@ -1,6 +1,9 @@
 <script>
   export let parrain
   import { genresIllustrés } from "$lib/parrain.js"
+
+  const crop = (p, len) =>
+      p.length <= len ? p : p.slice(0, len) + "[…]"
 </script>
 
 <div class="boxes_item">
@@ -17,7 +20,9 @@
       }
     </div>
 
-    <p class="boxes-item_field-box"> {parrain.taupin} <p/>
+    <p class="boxes-item_field-box"> 
+        {crop(parrain.taupin, 300)} 
+    <p/>
 
     {#if parrain.vœu}  
       <div class="boxes-item_field-box">
