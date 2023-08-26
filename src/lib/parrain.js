@@ -16,7 +16,7 @@ export async function getData(){
 export function fromArray(arr) {
   return {
     image: arr[3],
-    nom: arr[0].split(" ")[1],
+    nom: arr[0].split(" ").slice(1).join(" "),
     prénom: arr[0].split(" ")[0],
     surnom: arr[2],
     genre: arr[1],

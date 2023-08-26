@@ -9,7 +9,7 @@
 </svelte:head>
 
 <section>
-	<h1> Bienvenue ! </h1>
+	<h1> Bienvenue ! Voici {data.parrains.length} des parrains </h1>
 
 	<div class="format-container">
 		<div class="boxes_box">
