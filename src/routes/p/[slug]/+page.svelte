@@ -35,11 +35,11 @@
           <h3>Une anecdote sur ton année ?</h3>
           <p> { parrain.anecdote } </p>
         {/if}
-        {#if parrain.anecdote}
+        {#if parrain.team}
           <h3>Algèbre ou Analyse ?</h3>
           <p> { parrain.team } </p>
         {/if}
-        {#if parrain.anecdote}
+        {#if parrain.bizuth}
           <h3>Un message pour les bizuths ?</h3>
           <p> { parrain.bizuth } </p>
         {/if}
