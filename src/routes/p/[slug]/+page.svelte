@@ -28,7 +28,7 @@
           <p> { parrain.vœu } </p>
         {/if}
         {#if parrain.ânerie}
-          <h3>Ta plus grosse ânerie ?</h3>
+          <h3>Ta plus grosse ânerie scientifique ?</h3>
           <p> { parrain.ânerie } </p>
         {/if}
         {#if parrain.anecdote}
