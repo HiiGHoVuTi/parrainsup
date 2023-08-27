@@ -19,7 +19,7 @@
 </svelte:head>
 
 <section>
-	<h1> Bienvenue ! Voici {data.parrains.length} des parrains </h1>
+	<h1> Bienvenue ! Voici {data.parrains.length} de vos parrains </h1>
 
 
   <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
