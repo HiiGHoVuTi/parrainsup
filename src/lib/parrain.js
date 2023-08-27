@@ -8,9 +8,7 @@ export async function getData(){
 	const res = await fetch(url)
 	const data = await res.text()
   return Papa.parse(data).data.slice(2).filter(p => p.length > 1)
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
+    .sort((a, b) => a[0].split(" ")[1].localeCompare(b[0].split(" ")[1]))
 }
 
 export function fromArray(arr) {
