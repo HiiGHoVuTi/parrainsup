@@ -24,9 +24,7 @@
 		<slot />
 	</main>
 
-	<footer>
-		Fait avec amour par vos parrains 💖
-	</footer>
+	<footer>Fait avec amour par vos parrains 💖</footer>
 </div>
 
 <style>

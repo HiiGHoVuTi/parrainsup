@@ -1,1 +1,1 @@
-export default "https://pastebin.com/raw/DbBYRNAf"
+export default 'https://pastebin.com/raw/DbBYRNAf';
